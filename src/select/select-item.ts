@@ -1,7 +1,7 @@
 export class SelectItem {
   public id:string;
   public text:string;
-  public children:Array<SelectItem>;
+  public children:SelectItem[];
   public parent:SelectItem;
 
   public constructor(source:any) {

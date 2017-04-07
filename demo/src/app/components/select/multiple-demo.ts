@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './multiple-demo.html'
 })
 export class MultipleDemoComponent {
-  public items:Array<string> = ['Amsterdam', 'Antwerp', 'Athens', 'Barcelona',
+  public items:string[] = ['Amsterdam', 'Antwerp', 'Athens', 'Barcelona',
     'Berlin', 'Birmingham', 'Bradford', 'Bremen', 'Brussels', 'Bucharest',
     'Budapest', 'Cologne', 'Copenhagen', 'Dortmund', 'Dresden', 'Dublin', 'Düsseldorf',
     'Essen', 'Frankfurt', 'Genoa', 'Glasgow', 'Gothenburg', 'Hamburg', 'Hannover',
@@ -15,15 +15,16 @@ export class MultipleDemoComponent {
     'Sofia', 'Stockholm', 'Stuttgart', 'The Hague', 'Turin', 'Valencia', 'Vienna',
     'Vilnius', 'Warsaw', 'Wrocław', 'Zagreb', 'Zaragoza'];
 
-  private value:any = ['Athens'];
+  public value:any = ['Athens'];
+  public disabled:boolean = false;
   private _disabledV:string = '0';
-  private disabled:boolean = false;
 
-  private get disabledV():string {
+
+  public get disabledV():string {
     return this._disabledV;
   }
 
-  private set disabledV(value:string) {
+  public set disabledV(value:string) {
     this._disabledV = value;
     this.disabled = this._disabledV === '1';
   }

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './children-demo.html'
 })
 export class ChildrenDemoComponent {
-  public items:Array<any> = [
+  public items:any[] = [
     {
       text: 'Austria',
       children: [
@@ -181,15 +181,16 @@ export class ChildrenDemoComponent {
       ]
     }
   ];
-  private value:any = {};
-  private _disabledV:string = '0';
-  private disabled:boolean = false;
 
-  private get disabledV():string {
+  public value:any = {};
+  public disabled:boolean = false;
+  private _disabledV:string = '0';
+
+  public get disabledV():string {
     return this._disabledV;
   }
 
-  private set disabledV(value:string) {
+  public set disabledV(value:string) {
     this._disabledV = value;
     this.disabled = this._disabledV === '1';
   }

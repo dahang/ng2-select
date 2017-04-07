@@ -7,7 +7,7 @@
     "lite-server": "lite-server -c demo/bs-config.json",
     "demo.serve": "run-s build link demo.build lite-server",
     "demo.gh-pages": "run-s build demo.build demo.deploy",
-    "demo.build": "ng build -prod --aot",
+    "demo.build": "ng build -prod ",
     "demo.deploy": "gh-pages -d demo/dist",
     "link": "ngm link -p src --here",
     "lint": "exit 0",
@@ -16,7 +16,7 @@
     "flow.github-release": "conventional-github-releaser -p angular",
     "build": "ngm build -p src --clean",
     "build.watch": "ngm build -p src --watch --skip-bundles",
-    "start": "ng serve --aot",
+    "start": "ng serve ",
     "pretest": "run-s lint build link",
     "test": "ng test -sr",
     "test-coverage": "ng test -sr -cc",
@@ -42,28 +42,28 @@
   },
   "homepage": "https://github.com/valor-software/ng2-select#readme",
   "peerDependencies": {
-    "@angular/common": "^2.3.0",
-    "@angular/core": "^2.3.0"
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0"
   },
   "devDependencies": {
-    "@angular/common": "2.4.3",
-    "@angular/compiler": "2.4.3",
-    "@angular/compiler-cli": "2.4.3",
-    "@angular/core": "2.4.3",
-    "@angular/forms": "2.4.3",
-    "@angular/http": "2.4.3",
-    "@angular/language-service": "2.4.3",
-    "@angular/platform-browser": "2.4.3",
-    "@angular/platform-browser-dynamic": "2.4.3",
-    "@angular/router": "3.4.3",
+    "@angular/cli": "1.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/language-service": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
     "@angular/tsc-wrapped": "0.5.1",
-    "@ngtools/webpack": "1.2.3",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.22",
     "@types/jasmine": "2.5.40",
     "@types/marked": "0.0.28",
     "@types/node": "7.0.0",
     "@types/webpack": "^2.2.1",
-    "angular-cli": "1.0.0-beta.25.5",
-    "bootstrap": "3.3.7",
+    "bootstrap": "4.0.0-alpha.6",
     "chokidar-cli": "1.2.0",
     "classlist-polyfill": "1.0.3",
     "codecov": "1.0.1",
@@ -92,7 +92,7 @@
     "lodash": "4.17.4",
     "markdown-loader": "^0.1.7",
     "marked": "0.3.6",
-    "ng2-bootstrap": "1.2.2",
+    "ngx-bootstrap": "^1.6.5",
     "ng2-page-scroll": "4.0.0-beta.2",
     "ngm-cli": "0.4.3",
     "npm-run-all": "^4.0.1",
@@ -100,17 +100,17 @@
     "protractor": "5.0.0",
     "reflect-metadata": "0.1.9",
     "require-dir": "0.3.1",
-    "rxjs": "5.0.3",
+    "rxjs": "^5.1.0",
     "systemjs-builder": "0.15.34",
     "ts-helpers": "^1.1.1",
     "ts-node": "2.0.0",
     "tslint": "4.3.1",
     "tslint-config-valorsoft": "1.2.0",
     "typedoc": "0.5.5",
-    "typescript": "2.1.5",
+    "typescript": "^2.2.0",
     "wallaby-webpack": "0.0.30",
     "webdriver-manager": "11.1.1",
-    "zone.js": "0.7.5"
+    "zone.js": "^0.8.4"
   },
   "contributors": [
     {
@@ -128,5 +128,8 @@
       "email": "otelnov@gmail.com",
       "url": "https://github.com/otelnov"
     }
-  ]
+  ],
+  "dependencies": {
+    
+  }
 }
